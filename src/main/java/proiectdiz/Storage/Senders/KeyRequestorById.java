@@ -1,14 +1,12 @@
 package proiectdiz.Storage.Senders;
 
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.springframework.web.reactive.function.client.WebClient;
 import proiectdiz.Storage.Config.WebClientConfig;
 import proiectdiz.Storage.Helpers.JsonHandler;
 import proiectdiz.Storage.Helpers.Properties;
 import proiectdiz.Storage.Log.Log;
 
 import java.util.Optional;
+import java.util.UUID;
 
 public class KeyRequestorById extends Thread {
 
@@ -18,14 +16,16 @@ public class KeyRequestorById extends Thread {
         this.key_uuid=uuid;
 
     }
-
-    public void run(){
+    private String response;
+    public void start(){
         WebClientConfig keySenderWebConfig = new WebClientConfig();
         KeyRequestByIdService _keyRequestorById= new KeyRequestByIdService( keySenderWebConfig.webClientBuilder());
         Optional<String> request=JsonHandler.CreateRequest(key_uuid);
-        String response="";
+
         if(request.isPresent()){
+            String uuid= UUID.randomUUID().toString();
             response=_keyRequestorById.getKey(request.get(), Properties.getDestination());
+
             Log.InfoLog(response);
 
         }
@@ -33,6 +33,10 @@ public class KeyRequestorById extends Thread {
 
 
 
+
+    }
+    public String getResponse(){
+        return response;
     }
 
 

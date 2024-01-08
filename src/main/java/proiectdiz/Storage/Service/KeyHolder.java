@@ -23,23 +23,8 @@ public class KeyHolder {
 
     }
 
-    public static QuantecKey  getKeyByUUID(String uuid){
-        QuantecKey key=null;
-        for(Map.Entry<String,String> entry: keyMapper.entrySet()){
-            if(entry.getKey().equals(uuid)){
-                key=getKey(entry.getValue());
-                break;
-            }
-        }
-        return key;
-    }
 
 
-    public static void AddKey(QuantecKey key, String uuid){
-        KeyList.add(key);
-        keyMapper.put(uuid,key.get_keyId());
-
-    }
 
 
 

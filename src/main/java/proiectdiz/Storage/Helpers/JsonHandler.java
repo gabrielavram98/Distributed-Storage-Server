@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import proiectdiz.Storage.Log.Log;
+import proiectdiz.Storage.Model.QuantecKey;
+import proiectdiz.Storage.Service.KeyHolder;
 
 import java.util.Optional;
 
@@ -54,6 +56,31 @@ public class JsonHandler {
 
 
     }
+
+     public static String getKeyFromJson(String response){
+
+            JsonNode respJSON=StringToJson(response);
+
+
+         JsonNode keysNode = respJSON.get("keys").get(0);
+
+         String key = keysNode.get("key").asText();
+            return key;
+
+     }
+
+
+    public static String getKeyIDFromJson(String response){
+        JsonNode respJSON=StringToJson(response);
+        JsonNode keysNode = respJSON.get("keys").get(0);
+        String keyId = keysNode.get("key_ID").asText();
+        return keyId;
+
+    }
+
+
+
+
 
 
 }

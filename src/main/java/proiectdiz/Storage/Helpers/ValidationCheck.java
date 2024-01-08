@@ -11,7 +11,7 @@ public class ValidationCheck {
     public static int Validate(JsonNode request) throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
 
-        JsonSchema schemaStream = SchemaLoader.LoadSchemaFromPath( "src\\main\\resources\\ShareLoader.json" );
+        JsonSchema schemaStream = SchemaLoader.LoadSchemaFromPath( "src\\main\\resources\\Share_format.json" );
         Set<ValidationMessage> validationMessage = null;
         if (schemaStream != null) {
 

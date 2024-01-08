@@ -1027,3 +1027,14 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2024-01-03 16:04:19,974 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
 2024-01-03 16:04:20,019 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
 2024-01-03 16:04:20,052 INFO [main] Started StorageApplication in 5.088 seconds (process running for 6.986)
+2024-01-08 16:14:14,531 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 15792 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-08 16:14:14,535 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-08 16:14:16,382 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-08 16:14:16,393 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-08 16:14:16,397 INFO [main] Starting service [Tomcat]
+2024-01-08 16:14:16,397 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-08 16:14:16,523 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-08 16:14:16,524 INFO [main] Root WebApplicationContext: initialization completed in 1695 ms
+2024-01-08 16:14:17,243 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-08 16:14:17,273 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-08 16:14:17,290 INFO [main] Started StorageApplication in 3.367 seconds (process running for 4.151)

@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "GUID": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "Shares": {
+      "type": "object",
+      "properties": {
+        "X": {
+          "type": "string"
+        },
+        "Y": {
+          "type": "string"
+        }
+      },
+      "required": ["X", "Y"]
+    }
+  },
+  "required": ["GUID", "Shares"]
+}

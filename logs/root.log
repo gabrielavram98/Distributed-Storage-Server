@@ -1,0 +1,1029 @@
+2023-12-13 15:40:04,006 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 21776 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 15:40:04,007 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 15:40:05,089 INFO [main] Tomcat initialized with port 8080 (http)
+2023-12-13 15:40:05,098 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 15:40:05,100 INFO [main] Starting service [Tomcat]
+2023-12-13 15:40:05,100 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-13 15:40:05,171 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 15:40:05,171 INFO [main] Root WebApplicationContext: initialization completed in 1108 ms
+2023-12-13 15:40:05,179 ERROR [main] Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+2023-12-13 15:40:05,211 INFO [main] Stopping service [Tomcat]
+2023-12-13 15:40:05,219 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-12-13 15:40:05,229 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 15:40:05,249 ERROR [main] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at proiectdiz.Storage.StorageApplication.main(StorageApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:501)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4850)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 56 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configureFeature(Jackson2ObjectMapperBuilder.java:843)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.customizeDefaultFeatures(Jackson2ObjectMapperBuilder.java:810)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:780)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:702)
+	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:63)
+	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:85)
+	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61)
+	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:174)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 57 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.cfg.DatatypeFeature
+	... 71 common frames omitted
+2023-12-13 15:41:38,811 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 17444 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 15:41:38,812 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 15:41:39,829 INFO [main] Tomcat initialized with port 8080 (http)
+2023-12-13 15:41:39,837 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 15:41:39,839 INFO [main] Starting service [Tomcat]
+2023-12-13 15:41:39,839 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-13 15:41:39,896 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 15:41:39,896 INFO [main] Root WebApplicationContext: initialization completed in 1033 ms
+2023-12-13 15:41:39,903 ERROR [main] Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+2023-12-13 15:41:39,929 INFO [main] Stopping service [Tomcat]
+2023-12-13 15:41:39,935 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-12-13 15:41:39,943 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 15:41:39,961 ERROR [main] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at proiectdiz.Storage.StorageApplication.main(StorageApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:501)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4850)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 56 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configureFeature(Jackson2ObjectMapperBuilder.java:843)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.customizeDefaultFeatures(Jackson2ObjectMapperBuilder.java:810)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:780)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:702)
+	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:63)
+	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:85)
+	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61)
+	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:174)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 57 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.cfg.DatatypeFeature
+	... 71 common frames omitted
+2023-12-13 15:41:50,346 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 22180 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 15:41:50,347 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 15:41:51,264 INFO [main] Tomcat initialized with port 8080 (http)
+2023-12-13 15:41:51,271 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 15:41:51,273 INFO [main] Starting service [Tomcat]
+2023-12-13 15:41:51,273 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-13 15:41:51,327 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 15:41:51,327 INFO [main] Root WebApplicationContext: initialization completed in 940 ms
+2023-12-13 15:41:51,333 ERROR [main] Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+2023-12-13 15:41:51,362 INFO [main] Stopping service [Tomcat]
+2023-12-13 15:41:51,367 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-12-13 15:41:51,375 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 15:41:51,399 ERROR [main] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at proiectdiz.Storage.StorageApplication.main(StorageApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:501)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4850)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 54 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configureFeature(Jackson2ObjectMapperBuilder.java:843)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.customizeDefaultFeatures(Jackson2ObjectMapperBuilder.java:810)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:780)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:702)
+	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:63)
+	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:85)
+	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61)
+	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:174)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 55 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.cfg.DatatypeFeature
+	... 69 common frames omitted
+2023-12-13 15:42:24,339 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 11128 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 15:42:24,342 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 15:42:25,284 INFO [main] Tomcat initialized with port 8080 (http)
+2023-12-13 15:42:25,292 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 15:42:25,293 INFO [main] Starting service [Tomcat]
+2023-12-13 15:42:25,294 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-13 15:42:25,352 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 15:42:25,352 INFO [main] Root WebApplicationContext: initialization completed in 969 ms
+2023-12-13 15:42:25,358 ERROR [main] Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+2023-12-13 15:42:25,391 INFO [main] Stopping service [Tomcat]
+2023-12-13 15:42:25,396 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-12-13 15:42:25,404 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 15:42:25,428 ERROR [main] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at proiectdiz.Storage.StorageApplication.main(StorageApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:501)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4850)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 54 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configureFeature(Jackson2ObjectMapperBuilder.java:843)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.customizeDefaultFeatures(Jackson2ObjectMapperBuilder.java:810)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:780)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:702)
+	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:63)
+	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:85)
+	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61)
+	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:174)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 55 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.cfg.DatatypeFeature
+	... 69 common frames omitted
+2023-12-13 15:43:13,782 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 1784 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 15:43:13,784 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 15:43:14,660 INFO [main] Tomcat initialized with port 8080 (http)
+2023-12-13 15:43:14,667 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 15:43:14,668 INFO [main] Starting service [Tomcat]
+2023-12-13 15:43:14,669 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-13 15:43:14,724 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 15:43:14,724 INFO [main] Root WebApplicationContext: initialization completed in 896 ms
+2023-12-13 15:43:14,731 ERROR [main] Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+2023-12-13 15:43:14,756 INFO [main] Stopping service [Tomcat]
+2023-12-13 15:43:14,762 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-12-13 15:43:14,771 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 15:43:14,787 ERROR [main] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at proiectdiz.Storage.StorageApplication.main(StorageApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:501)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4850)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 56 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configureFeature(Jackson2ObjectMapperBuilder.java:843)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.customizeDefaultFeatures(Jackson2ObjectMapperBuilder.java:810)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:780)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:702)
+	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:63)
+	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:85)
+	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61)
+	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:174)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 57 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.cfg.DatatypeFeature
+	... 71 common frames omitted
+2023-12-13 15:44:02,314 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 20312 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 15:44:02,316 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 15:44:03,180 INFO [main] Tomcat initialized with port 8080 (http)
+2023-12-13 15:44:03,186 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 15:44:03,187 INFO [main] Starting service [Tomcat]
+2023-12-13 15:44:03,188 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-13 15:44:03,238 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 15:44:03,238 INFO [main] Root WebApplicationContext: initialization completed in 872 ms
+2023-12-13 15:44:03,245 ERROR [main] Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+2023-12-13 15:44:03,272 INFO [main] Stopping service [Tomcat]
+2023-12-13 15:44:03,278 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-12-13 15:44:03,285 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 15:44:03,300 ERROR [main] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at proiectdiz.Storage.StorageApplication.main(StorageApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:501)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4850)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 56 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configureFeature(Jackson2ObjectMapperBuilder.java:843)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.customizeDefaultFeatures(Jackson2ObjectMapperBuilder.java:810)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:780)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:702)
+	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:63)
+	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:85)
+	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61)
+	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:174)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 57 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.cfg.DatatypeFeature
+	... 71 common frames omitted
+2023-12-13 15:59:02,301 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 21060 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 15:59:02,302 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 15:59:03,106 INFO [main] Tomcat initialized with port 8080 (http)
+2023-12-13 15:59:03,112 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 15:59:03,113 INFO [main] Starting service [Tomcat]
+2023-12-13 15:59:03,113 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-13 15:59:03,160 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 15:59:03,160 INFO [main] Root WebApplicationContext: initialization completed in 810 ms
+2023-12-13 15:59:03,165 ERROR [main] Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+2023-12-13 15:59:03,197 INFO [main] Stopping service [Tomcat]
+2023-12-13 15:59:03,202 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-12-13 15:59:03,208 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 15:59:03,221 ERROR [main] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at proiectdiz.Storage.StorageApplication.main(StorageApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:501)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4850)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 54 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configureFeature(Jackson2ObjectMapperBuilder.java:843)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.customizeDefaultFeatures(Jackson2ObjectMapperBuilder.java:810)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:780)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:702)
+	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:63)
+	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:85)
+	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61)
+	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:174)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 55 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.cfg.DatatypeFeature
+	... 69 common frames omitted
+2023-12-13 15:59:33,881 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 21936 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 15:59:33,885 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 15:59:34,744 INFO [main] Tomcat initialized with port 8080 (http)
+2023-12-13 15:59:34,750 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 15:59:34,752 INFO [main] Starting service [Tomcat]
+2023-12-13 15:59:34,752 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-13 15:59:34,802 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 15:59:34,803 INFO [main] Root WebApplicationContext: initialization completed in 876 ms
+2023-12-13 15:59:34,809 ERROR [main] Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+2023-12-13 15:59:34,832 INFO [main] Stopping service [Tomcat]
+2023-12-13 15:59:34,838 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-12-13 15:59:34,846 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 15:59:34,865 ERROR [main] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at proiectdiz.Storage.StorageApplication.main(StorageApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:501)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4850)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 56 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configureFeature(Jackson2ObjectMapperBuilder.java:843)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.customizeDefaultFeatures(Jackson2ObjectMapperBuilder.java:810)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:780)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:702)
+	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:63)
+	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:85)
+	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61)
+	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:174)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 57 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.cfg.DatatypeFeature
+	... 71 common frames omitted
+2023-12-13 16:00:31,394 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 21076 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:00:31,395 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:00:32,255 INFO [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-13 16:00:32,262 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:00:32,263 INFO [main] Starting service [Tomcat]
+2023-12-13 16:00:32,264 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:00:32,362 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:00:32,362 INFO [main] Root WebApplicationContext: initialization completed in 917 ms
+2023-12-13 16:00:33,236 INFO [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:00:33,268 INFO [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-13 16:00:33,280 INFO [main] Started StorageApplication in 2.234 seconds (process running for 3.092)
+2023-12-13 16:01:19,645 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 300 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:01:19,647 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:01:20,656 INFO [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-13 16:01:20,666 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:01:20,668 INFO [main] Starting service [Tomcat]
+2023-12-13 16:01:20,668 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:01:20,782 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:01:20,783 INFO [main] Root WebApplicationContext: initialization completed in 1073 ms
+2023-12-13 16:01:21,724 INFO [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:01:21,735 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-12-13 16:01:21,767 INFO [main] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:01:21,767 INFO [main] Stopping service [Tomcat]
+2023-12-13 16:01:21,779 INFO [main] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:01:21,780 INFO [main] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:01:21,788 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 16:01:21,813 ERROR [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-12-13 16:03:03,805 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 17308 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:03:03,807 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:03:04,646 INFO [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-13 16:03:04,652 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:03:04,654 INFO [main] Starting service [Tomcat]
+2023-12-13 16:03:04,654 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:03:04,755 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:03:04,755 INFO [main] Root WebApplicationContext: initialization completed in 901 ms
+2023-12-13 16:03:05,590 INFO [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:03:05,599 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-12-13 16:03:05,627 INFO [main] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:03:05,627 INFO [main] Stopping service [Tomcat]
+2023-12-13 16:03:05,638 INFO [main] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:03:05,639 INFO [main] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:03:05,647 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 16:03:05,673 ERROR [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-12-13 16:03:57,715 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 13872 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:03:57,717 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:03:58,585 INFO [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-13 16:03:58,591 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:03:58,593 INFO [main] Starting service [Tomcat]
+2023-12-13 16:03:58,593 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:03:58,668 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:03:58,668 INFO [main] Root WebApplicationContext: initialization completed in 903 ms
+2023-12-13 16:03:59,596 INFO [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:03:59,638 INFO [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-13 16:03:59,651 INFO [main] Started StorageApplication in 2.319 seconds (process running for 3.368)
+2023-12-13 16:04:16,806 INFO [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-13 16:04:16,807 INFO [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-12-13 16:04:16,807 INFO [http-nio-8080-exec-2] Completed initialization in 0 ms
+2023-12-13 16:04:47,328 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 7136 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:04:47,329 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:04:48,232 INFO [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-13 16:04:48,238 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:04:48,240 INFO [main] Starting service [Tomcat]
+2023-12-13 16:04:48,240 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:04:48,333 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:04:48,333 INFO [main] Root WebApplicationContext: initialization completed in 954 ms
+2023-12-13 16:04:49,266 INFO [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:04:49,300 INFO [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-13 16:04:49,313 INFO [main] Started StorageApplication in 2.375 seconds (process running for 3.159)
+2023-12-13 16:04:50,131 INFO [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-13 16:04:50,131 INFO [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-12-13 16:04:50,132 INFO [http-nio-8080-exec-2] Completed initialization in 1 ms
+2023-12-13 16:05:50,162 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 14356 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:05:50,163 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:05:51,122 INFO [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-13 16:05:51,129 INFO [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:05:51,131 INFO [main] Starting service [Tomcat]
+2023-12-13 16:05:51,131 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:05:51,216 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:05:51,216 INFO [main] Root WebApplicationContext: initialization completed in 1005 ms
+2023-12-13 16:05:52,131 INFO [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:05:52,142 WARN [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-12-13 16:05:52,172 INFO [main] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:05:52,173 INFO [main] Stopping service [Tomcat]
+2023-12-13 16:05:52,183 INFO [main] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:05:52,184 INFO [main] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-13 16:05:52,194 INFO [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-13 16:05:52,222 ERROR [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-12-13 16:07:19,339 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 13876 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:07:19,341 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:07:20,260 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2023-12-13 16:07:20,268 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:07:20,269 INFO [main] Starting service [Tomcat]
+2023-12-13 16:07:20,269 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:07:20,355 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:07:20,355 INFO [main] Root WebApplicationContext: initialization completed in 968 ms
+2023-12-13 16:07:21,181 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:07:21,214 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2023-12-13 16:07:21,226 INFO [main] Started StorageApplication in 2.286 seconds (process running for 3.142)
+2023-12-13 16:15:33,055 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 8148 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:15:33,056 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:15:33,909 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2023-12-13 16:15:33,918 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:15:33,919 INFO [main] Starting service [Tomcat]
+2023-12-13 16:15:33,919 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:15:34,021 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:15:34,021 INFO [main] Root WebApplicationContext: initialization completed in 917 ms
+2023-12-13 16:15:35,019 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:15:35,052 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2023-12-13 16:15:35,065 INFO [main] Started StorageApplication in 2.401 seconds (process running for 3.225)
+2023-12-13 16:16:30,913 INFO [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-13 16:16:30,913 INFO [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-13 16:16:30,914 INFO [http-nio-8081-exec-1] Completed initialization in 1 ms
+2023-12-13 16:17:05,778 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 16228 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:17:05,780 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:17:06,595 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2023-12-13 16:17:06,610 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:17:06,611 INFO [main] Starting service [Tomcat]
+2023-12-13 16:17:06,612 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:17:06,687 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:17:06,687 INFO [main] Root WebApplicationContext: initialization completed in 851 ms
+2023-12-13 16:17:07,448 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:17:07,478 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2023-12-13 16:17:07,489 INFO [main] Started StorageApplication in 2.082 seconds (process running for 2.826)
+2023-12-13 16:17:32,046 INFO [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-13 16:17:32,046 INFO [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-13 16:17:32,047 INFO [http-nio-8081-exec-1] Completed initialization in 1 ms
+2023-12-13 16:41:30,851 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 5012 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:41:30,854 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:41:31,703 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2023-12-13 16:41:31,710 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:41:31,712 INFO [main] Starting service [Tomcat]
+2023-12-13 16:41:31,712 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:41:31,812 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:41:31,812 INFO [main] Root WebApplicationContext: initialization completed in 906 ms
+2023-12-13 16:41:32,246 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:41:32,269 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2023-12-13 16:41:32,278 INFO [main] Started StorageApplication in 1.802 seconds (process running for 2.553)
+2023-12-13 16:41:36,914 INFO [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-13 16:41:36,915 INFO [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-13 16:41:36,916 INFO [http-nio-8081-exec-1] Completed initialization in 1 ms
+2023-12-13 16:41:36,991 ERROR [http-nio-8081-exec-1] {"GUID":"4e28737b-7cc9-46c6-9913-3539776e1dd6","Shares":{"X":"990804879655895704161967724042611997626847169749614722682582829952760094723607200420212732350933573770078062456772000345103657112193787277104252090651733146061881540424233","Y":"119614842522822620279923390655416196094712580920764429906493530113046234380361210172337561393833706650979820506481635171418873492463265173511612757390258473802649045521342"}}
+2023-12-13 16:42:44,912 ERROR [http-nio-8081-exec-2] {"GUID":"5198bdcc-6988-4073-ad00-f34bcad14a88","Shares":{"X":"692195709774440539076345539635648103209783122950129746349426617403083032740813742203167081092788795620924386961546378441284772367249796459662769234303770123054419142034882","Y":"1074691168262047967235776416604900277568310097640218930996084726145058392901159734371910014141794551957090485514074702249540699432921932852846707422861971716556363329432684"}}
+2023-12-13 16:43:33,879 ERROR [http-nio-8081-exec-3] {"GUID":"c14a5df1-34b9-4965-a4b6-c192fcd7e3c0","Shares":{"X":"64785343279868097747635266265070121485735091372085874873924954672188069553634652335327821887642070720371902536870637037410938126581692069668384764142230981055788826281557","Y":"1294549109845276934859299994698301320977417750646585817383327540780069837411183663631057127214359009494795592342099834294851209242239564324765160442394249733057283009040561"}}
+2023-12-13 16:46:23,335 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 12508 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:46:23,338 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:46:24,498 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2023-12-13 16:46:24,509 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:46:24,512 INFO [main] Starting service [Tomcat]
+2023-12-13 16:46:24,512 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:46:24,636 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:46:24,636 INFO [main] Root WebApplicationContext: initialization completed in 1231 ms
+2023-12-13 16:46:25,198 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:46:25,229 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2023-12-13 16:46:25,240 INFO [main] Started StorageApplication in 2.526 seconds (process running for 3.545)
+2023-12-13 16:46:29,411 INFO [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-13 16:46:29,411 INFO [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-13 16:46:29,412 INFO [http-nio-8081-exec-1] Completed initialization in 1 ms
+2023-12-13 16:48:12,264 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 12816 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2023-12-13 16:48:12,266 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-13 16:48:13,504 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2023-12-13 16:48:13,513 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:48:13,515 INFO [main] Starting service [Tomcat]
+2023-12-13 16:48:13,515 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-13 16:48:13,641 INFO [main] Initializing Spring embedded WebApplicationContext
+2023-12-13 16:48:13,641 INFO [main] Root WebApplicationContext: initialization completed in 1306 ms
+2023-12-13 16:48:14,260 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-12-13 16:48:14,294 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2023-12-13 16:48:14,332 INFO [main] Started StorageApplication in 2.667 seconds (process running for 3.807)
+2023-12-13 16:48:14,587 INFO [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-13 16:48:14,587 INFO [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-13 16:48:14,589 INFO [http-nio-8081-exec-1] Completed initialization in 2 ms
+2024-01-03 16:04:16,402 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 21620 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-03 16:04:16,408 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-03 16:04:18,377 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-03 16:04:18,391 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-03 16:04:18,395 INFO [main] Starting service [Tomcat]
+2024-01-03 16:04:18,395 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-03 16:04:18,575 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-03 16:04:18,575 INFO [main] Root WebApplicationContext: initialization completed in 2047 ms
+2024-01-03 16:04:19,974 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-03 16:04:20,019 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-03 16:04:20,052 INFO [main] Started StorageApplication in 5.088 seconds (process running for 6.986)

@@ -20,12 +20,12 @@ public class Properties {
         }
         return servername;
     }
-    public static String getDestination(){
+    public static String getDestination(char i){
         String destination="";
         try (InputStream input = new FileInputStream(CONFIG_FILE_PATH)) {
             java.util.Properties properties = new java.util.Properties();
             properties.load(input);
-            destination=properties.getProperty("destination");
+            destination=properties.getProperty("destination"+i);
         }catch (Exception e){
             Log.ErrorLog(e.getMessage());
         }

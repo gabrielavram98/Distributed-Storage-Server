@@ -24,7 +24,7 @@ public class KeyRequestorById extends Thread {
 
         if(request.isPresent()){
             String uuid= UUID.randomUUID().toString();
-            response=_keyRequestorById.getKey(request.get(), Properties.getDestination());
+            response=_keyRequestorById.getKey(request.get(), Properties.getDestination(key_uuid.charAt(key_uuid.length()-1)));
 
             Log.InfoLog(response);
 

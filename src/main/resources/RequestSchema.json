@@ -1,22 +1,32 @@
 {
   "type": "object",
   "properties": {
-    "GUID": {
-      "type": "string",
-      "format": "uuid"
-    },
     "Shares": {
-      "type": "object",
-      "properties": {
-        "X": {
-          "type": "string"
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "GUID": {
+            "type": "string",
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "description": "A valid GUID format"
+          },
+          "X": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]+$",
+            "description": "A string representing an integer"
+          },
+          "Y": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]+$",
+            "description": "A string representing an integer"
+          }
         },
-        "Y": {
-          "type": "string"
-        }
-      },
-      "required": ["X", "Y"]
+        "required": ["GUID", "X", "Y"],
+        "additionalProperties": false
+      }
     }
   },
-  "required": ["GUID", "Shares"]
+  "required": ["Shares"],
+  "additionalProperties": false
 }

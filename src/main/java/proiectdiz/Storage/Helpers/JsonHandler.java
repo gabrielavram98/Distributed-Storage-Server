@@ -7,36 +7,43 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import proiectdiz.Storage.Log.Log;
 import proiectdiz.Storage.Model.QuantecKey;
+import proiectdiz.Storage.Model.ShareObject;
 import proiectdiz.Storage.Service.KeyHolder;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class JsonHandler {
 
-    public JsonHandler(){};
-    public static JsonNode StringToJson(String message){
-        try{
+    public JsonHandler() {
+    }
+
+    ;
+
+    public static JsonNode StringToJson(String message) {
+        try {
             ObjectMapper objectMapper = new ObjectMapper();
             return objectMapper.readTree(message);
-        } catch(Exception e){
-            Log.ErrorLog("Error at converting to json: "+e.getMessage());
+        } catch (Exception e) {
+            Log.ErrorLog("Error at converting to json: " + e.getMessage());
             return null;
         }
 
     }
+
     public static String JsonToString(JsonNode request) throws JsonProcessingException {
-        try{
+        try {
             ObjectMapper objectMapper = new ObjectMapper();
             return objectMapper.writeValueAsString(request);
-        }
-        catch(Exception e){
-            Log.ErrorLog("Error at converting to json:"+e.getMessage());
+        } catch (Exception e) {
+            Log.ErrorLog("Error at converting to json:" + e.getMessage());
             return null;
         }
 
     }
 
-    public static Optional<String> CreateRequest(String _keyID){
+    public static Optional<String> CreateRequest(String _keyID) {
 
         ObjectMapper objectMapper = new ObjectMapper();
         ObjectNode rootNode = objectMapper.createObjectNode();
@@ -57,21 +64,21 @@ public class JsonHandler {
 
     }
 
-     public static String getKeyFromJson(String response){
+    public static String getKeyFromJson(String response) {
 
-            JsonNode respJSON=StringToJson(response);
-
-
-         JsonNode keysNode = respJSON.get("keys").get(0);
-
-         String key = keysNode.get("key").asText();
-            return key;
-
-     }
+        JsonNode respJSON = StringToJson(response);
 
 
-    public static String getKeyIDFromJson(String response){
-        JsonNode respJSON=StringToJson(response);
+        JsonNode keysNode = respJSON.get("keys").get(0);
+
+        String key = keysNode.get("key").asText();
+        return key;
+
+    }
+
+
+    public static String getKeyIDFromJson(String response) {
+        JsonNode respJSON = StringToJson(response);
         JsonNode keysNode = respJSON.get("keys").get(0);
         String keyId = keysNode.get("key_ID").asText();
         return keyId;
@@ -79,8 +86,31 @@ public class JsonHandler {
     }
 
 
+    public static List<ShareObject> getSharesFromPile(String pile) {
+        List<ShareObject> shares = new ArrayList<>();
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            JsonNode rootNode = objectMapper.readTree(pile);
+            JsonNode sharesNode = rootNode.get("Shares");
+            if (sharesNode.isArray()) {
+                for (JsonNode shareNode : sharesNode) {
+                    String guid = shareNode.get("GUID").asText();
+                    String x = shareNode.get("X").asText();
+                    String y = shareNode.get("Y").asText();
+                    ShareObject share = new ShareObject(x, y, guid);
+                    shares.add(share);
+
+
+                }
+            }
+            return shares;
+        } catch (Exception e) {
+            Log.ErrorLog(e.getMessage());
+            return null;
+        }
 
 
 
-
+    }
 }

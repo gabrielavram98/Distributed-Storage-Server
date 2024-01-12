@@ -3,12 +3,14 @@ package proiectdiz.Storage.Service;
 import com.fasterxml.jackson.databind.JsonNode;
 import proiectdiz.Storage.Helpers.JsonHandler;
 import proiectdiz.Storage.Log.Log;
+import proiectdiz.Storage.Model.ShareObject;
 import proiectdiz.Storage.Senders.AES;
 import proiectdiz.Storage.Senders.KeyRequestorById;
 
 import javax.crypto.spec.IvParameterSpec;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
+import java.util.List;
 
 public class ProcessShare {
 
@@ -32,7 +34,8 @@ public class ProcessShare {
             AES aes= new AES(key,encrypted_share);
             aes.setIv(new IvParameterSpec(ivBytes));
             String sharePlainText=aes.Decrypt();
-            System.out.println(sharePlainText);
+            List<ShareObject> shares= JsonHandler.getSharesFromPile(sharePlainText);
+            //System.out.println("I come from thread that handles share number:"+key_ID.charAt(key_ID.length()-1)+": "+sharePlainText);
 
         }catch (Exception e){
             Log.ErrorLog(e.getMessage());

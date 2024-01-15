@@ -19,8 +19,8 @@ public class KeyRequestorById extends Thread {
     private String response;
     public void start(){
         WebClientConfig keySenderWebConfig = new WebClientConfig();
-        KeyRequestByIdService _keyRequestorById= new KeyRequestByIdService( keySenderWebConfig.webClientBuilder());
-        Optional<String> request=JsonHandler.CreateRequest(key_uuid);
+        KeyRequestService _keyRequestorById= new KeyRequestService( keySenderWebConfig.webClientBuilder());
+        Optional<String> request=JsonHandler.CreateGetKeyByIdRequest(key_uuid);
 
         if(request.isPresent()){
             String uuid= UUID.randomUUID().toString();

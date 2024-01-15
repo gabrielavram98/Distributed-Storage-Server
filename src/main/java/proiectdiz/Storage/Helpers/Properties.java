@@ -32,4 +32,16 @@ public class Properties {
         return destination;
     }
 
+    public static String getDestination_(char i){
+        String destination="";
+        try (InputStream input = new FileInputStream(CONFIG_FILE_PATH)) {
+            java.util.Properties properties = new java.util.Properties();
+            properties.load(input);
+            destination=properties.getProperty("destination_"+i);
+        }catch (Exception e){
+            Log.ErrorLog(e.getMessage());
+        }
+        return destination;
+    }
+
 }

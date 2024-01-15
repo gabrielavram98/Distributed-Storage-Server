@@ -1,6 +1,7 @@
 package proiectdiz.Storage.Service;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import proiectdiz.Storage.Database.DatabaseHandler;
 import proiectdiz.Storage.Helpers.JsonHandler;
 import proiectdiz.Storage.Log.Log;
 import proiectdiz.Storage.Model.ShareObject;
@@ -8,7 +9,6 @@ import proiectdiz.Storage.Senders.AES;
 import proiectdiz.Storage.Senders.KeyRequestorById;
 
 import javax.crypto.spec.IvParameterSpec;
-import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.List;
 
@@ -47,4 +47,13 @@ public class ProcessShare {
 
 
     }
+
+    public void Gather(JsonNode request ){
+        DatabaseHandler db_handler= new DatabaseHandler();
+            List<ShareObject> empty_shares=JsonHandler.getUUID_List_FromPile(request);
+            List<ShareObject> populated_shares= db_handler.populate_with_shares(empty_shares);
+            //
+
+    }
+
 }

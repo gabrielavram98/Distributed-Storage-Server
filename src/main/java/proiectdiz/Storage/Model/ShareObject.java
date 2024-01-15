@@ -10,4 +10,16 @@ public class ShareObject {
         this.X=X;
         this.Y=Y;
     }
+    public ShareObject(String GUID){
+        this.GUID=GUID;
+    }
+
+    public void setX(String x) {
+        X = x;
+    }
+
+    public void setY(String y) {
+        Y = y;
+    }
+
 }

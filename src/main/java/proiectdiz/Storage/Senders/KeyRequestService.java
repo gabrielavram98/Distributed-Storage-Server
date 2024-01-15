@@ -6,12 +6,12 @@ import org.springframework.web.reactive.function.client.ExchangeFilterFunction;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
-public class KeyRequestByIdService {
+public class KeyRequestService {
 
     private final WebClient KeyRequestByIdClient;
 
     @Autowired
-    public KeyRequestByIdService(WebClient.Builder KeyRequestBuilder){
+    public KeyRequestService(WebClient.Builder KeyRequestBuilder){
         this.KeyRequestByIdClient=KeyRequestBuilder.baseUrl("http://localhost:44316")
                 .filter(logRequest())
                 .filter(logResponse())

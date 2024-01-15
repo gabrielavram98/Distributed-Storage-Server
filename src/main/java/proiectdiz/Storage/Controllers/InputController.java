@@ -9,14 +9,14 @@ import proiectdiz.Storage.Model.RequestHandler;
 @RestController
 public class InputController {
 
-    @PostMapping("/api/server1")
+    @PostMapping("/api/server1/store")
     public HttpStatus Input(@RequestBody String requestBody) {
         try{
             Log.ErrorLog(requestBody);
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.Handle(requestBody);
+            return handler.HandleStoreRequest(requestBody);
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -24,14 +24,14 @@ public class InputController {
         }
 
     }
-    @PostMapping("/api/server2")
+    @PostMapping("/api/server2/store")
     public HttpStatus Input2(@RequestBody String requestBody) {
         try{
             Log.ErrorLog(requestBody);
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.Handle(requestBody);
+            return handler.HandleStoreRequest(requestBody);
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -40,14 +40,14 @@ public class InputController {
 
     }
 
-    @PostMapping("/api/server3")
+    @PostMapping("/api/server3/store")
     public HttpStatus Input3(@RequestBody String requestBody) {
         try{
             Log.ErrorLog(requestBody);
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.Handle(requestBody);
+            return handler.HandleStoreRequest(requestBody);
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -56,14 +56,14 @@ public class InputController {
 
     }
 
-    @PostMapping("/api/server4")
+    @PostMapping("/api/server4/store")
     public HttpStatus Input4(@RequestBody String requestBody) {
         try{
             Log.ErrorLog(requestBody);
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.Handle(requestBody);
+            return handler.HandleStoreRequest(requestBody);
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -72,14 +72,14 @@ public class InputController {
 
     }
 
-    @PostMapping("/api/server5")
+    @PostMapping("/api/server5/store")
     public HttpStatus Input5(@RequestBody String requestBody) {
         try{
             Log.ErrorLog(requestBody);
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.Handle(requestBody);
+            return handler.HandleStoreRequest(requestBody);
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -87,14 +87,14 @@ public class InputController {
         }
 
     }
-    @PostMapping("/api/server6")
+    @PostMapping("/api/server6/store")
     public HttpStatus Input6(@RequestBody String requestBody) {
         try{
             Log.ErrorLog(requestBody);
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.Handle(requestBody);
+            return handler.HandleStoreRequest(requestBody);
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -103,14 +103,14 @@ public class InputController {
 
     }
 
-    @PostMapping("/api/server7")
+    @PostMapping("/api/server7/store")
     public HttpStatus Input7(@RequestBody String requestBody) {
         try{
             Log.ErrorLog(requestBody);
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.Handle(requestBody);
+            return handler.HandleStoreRequest(requestBody);
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -118,19 +118,31 @@ public class InputController {
         }
 
     }
-    @PostMapping("/api/server8")
+    @PostMapping("/api/server8/store")
     public HttpStatus Input8(@RequestBody String requestBody) {
         try{
             Log.ErrorLog(requestBody);
 
             RequestHandler handler= new RequestHandler();
-            return handler.Handle(requestBody);
+            return handler.HandleStoreRequest(requestBody);
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
             return HttpStatus.INTERNAL_SERVER_ERROR;
         }
 
+    }
+
+    @PostMapping("/api/server1/get")
+    public HttpStatus Output1(@RequestBody String requestBody){
+        try{
+            RequestHandler handler= new RequestHandler();
+            return handler.HandleGetRequest(requestBody);
+
+        }catch (Exception e){
+            Log.ErrorLog(e.getMessage());
+            return HttpStatus.INTERNAL_SERVER_ERROR;
+        }
     }
 
 

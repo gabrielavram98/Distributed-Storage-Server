@@ -1,8 +1,6 @@
 package proiectdiz.Storage.Service;
 
-import proiectdiz.Storage.Log.Log;
 import proiectdiz.Storage.Model.QuantecKey;
-import proiectdiz.Storage.Senders.KeyRequestorById;
 
 import java.util.*;
 

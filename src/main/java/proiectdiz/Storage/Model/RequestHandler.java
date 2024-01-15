@@ -12,7 +12,7 @@ public class RequestHandler {
 
     public RequestHandler(){}
 
-    public  HttpStatus Handle(String requestBody) throws Exception {
+    public  HttpStatus HandleStoreRequest(String requestBody) throws Exception {
         JsonNode requestBodyJSON= JsonHandler.StringToJson(requestBody);
         if(ValidationCheck.Validate(requestBodyJSON)!=0){
 
@@ -24,6 +24,13 @@ public class RequestHandler {
 
 
 
+        return HttpStatus.ACCEPTED;
+
+    }
+
+    public HttpStatus HandleGetRequest(String requestBody) throws Exception{
+
+        //TODO: Validate uuid array
         return HttpStatus.ACCEPTED;
 
     }

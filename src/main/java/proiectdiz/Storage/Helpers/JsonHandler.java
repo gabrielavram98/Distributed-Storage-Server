@@ -154,6 +154,12 @@ public class JsonHandler {
 
     }
 
+ //   public static String CreateSHARESJsonToSend(List<ShareObject> populated_list){
+ //       ObjectMapper objectMapper = new ObjectMapper();
+ //       JsonNode node=objectMapper.
+ //       for()
+ //   }
+
 
 
 }

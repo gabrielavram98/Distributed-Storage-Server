@@ -129,19 +129,19 @@ public class JsonHandler {
 
     }
 
-    public static List<ShareObject> getUUID_List_FromPile(JsonNode pile) {
-        List<ShareObject> shares = new ArrayList<>();
+    public static List<String> getUUID_List_FromPile(JsonNode pile) {
+        List<String> shares = new ArrayList<>();
         try {
 
-//TODO: ADAUGA IN PILE DIN CEALALTA PARTE
 
-            JsonNode sharesNode = pile.get("Share_IDS");
+
+            JsonNode sharesNode = pile.get("GUIDs");
             if (sharesNode.isArray()) {
                 for (JsonNode shareNode : sharesNode) {
                     String guid = shareNode.get("GUID").asText();
 
-                    ShareObject share = new ShareObject(guid);
-                    shares.add(share);
+                   // ShareObject share = new ShareObject(guid);
+                    shares.add(guid);
 
 
                 }

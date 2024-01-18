@@ -16,7 +16,7 @@ public class InputController {
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.HandleStoreRequest(requestBody);
+            return handler.HandleStoreRequest(requestBody,"1");
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -31,7 +31,7 @@ public class InputController {
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.HandleStoreRequest(requestBody);
+            return handler.HandleStoreRequest(requestBody,"2");
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -47,7 +47,7 @@ public class InputController {
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.HandleStoreRequest(requestBody);
+            return handler.HandleStoreRequest(requestBody,"3");
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -63,7 +63,7 @@ public class InputController {
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.HandleStoreRequest(requestBody);
+            return handler.HandleStoreRequest(requestBody,"4");
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -79,7 +79,7 @@ public class InputController {
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.HandleStoreRequest(requestBody);
+            return handler.HandleStoreRequest(requestBody,"5");
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -94,7 +94,7 @@ public class InputController {
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.HandleStoreRequest(requestBody);
+            return handler.HandleStoreRequest(requestBody,"6");
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -110,7 +110,7 @@ public class InputController {
 
 
             RequestHandler handler= new RequestHandler();
-            return handler.HandleStoreRequest(requestBody);
+            return handler.HandleStoreRequest(requestBody,"7");
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -124,7 +124,7 @@ public class InputController {
             Log.ErrorLog(requestBody);
 
             RequestHandler handler= new RequestHandler();
-            return handler.HandleStoreRequest(requestBody);
+            return handler.HandleStoreRequest(requestBody,"8");
         }
         catch(Exception e){
             Log.ErrorLog(e.getMessage());
@@ -137,7 +137,73 @@ public class InputController {
     public HttpStatus Output1(@RequestBody String requestBody){
         try{
             RequestHandler handler= new RequestHandler();
-            return handler.HandleGetRequest(requestBody);
+            return handler.HandleGetRequest(requestBody,"1");
+
+        }catch (Exception e){
+            Log.ErrorLog(e.getMessage());
+            return HttpStatus.INTERNAL_SERVER_ERROR;
+        }
+    }
+    @PostMapping("/api/server2/get")
+    public HttpStatus Output2(@RequestBody String requestBody){
+        try{
+            RequestHandler handler= new RequestHandler();
+            return handler.HandleGetRequest(requestBody,"2");
+
+        }catch (Exception e){
+            Log.ErrorLog(e.getMessage());
+            return HttpStatus.INTERNAL_SERVER_ERROR;
+        }
+    }
+    @PostMapping("/api/server3/get")
+    public HttpStatus Output3(@RequestBody String requestBody){
+        try{
+            RequestHandler handler= new RequestHandler();
+            return handler.HandleGetRequest(requestBody,"3");
+
+        }catch (Exception e){
+            Log.ErrorLog(e.getMessage());
+            return HttpStatus.INTERNAL_SERVER_ERROR;
+        }
+    }
+    @PostMapping("/api/server4/get")
+    public HttpStatus Output4(@RequestBody String requestBody){
+        try{
+            RequestHandler handler= new RequestHandler();
+            return handler.HandleGetRequest(requestBody,"4");
+
+        }catch (Exception e){
+            Log.ErrorLog(e.getMessage());
+            return HttpStatus.INTERNAL_SERVER_ERROR;
+        }
+    }
+    @PostMapping("/api/server5/get")
+    public HttpStatus Output5(@RequestBody String requestBody){
+        try{
+            RequestHandler handler= new RequestHandler();
+            return handler.HandleGetRequest(requestBody,"5");
+
+        }catch (Exception e){
+            Log.ErrorLog(e.getMessage());
+            return HttpStatus.INTERNAL_SERVER_ERROR;
+        }
+    }
+    @PostMapping("/api/server6/get")
+    public HttpStatus Output6(@RequestBody String requestBody){
+        try{
+            RequestHandler handler= new RequestHandler();
+            return handler.HandleGetRequest(requestBody,"6");
+
+        }catch (Exception e){
+            Log.ErrorLog(e.getMessage());
+            return HttpStatus.INTERNAL_SERVER_ERROR;
+        }
+    }
+    @PostMapping("/api/server7/get")
+    public HttpStatus Output7(@RequestBody String requestBody){
+        try{
+            RequestHandler handler= new RequestHandler();
+            return handler.HandleGetRequest(requestBody,"7");
 
         }catch (Exception e){
             Log.ErrorLog(e.getMessage());

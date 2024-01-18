@@ -22,4 +22,15 @@ public class ShareObject {
         Y = y;
     }
 
+    public String getGUID() {
+        return GUID;
+    }
+
+    public String getX() {
+        return X;
+    }
+
+    public String getY() {
+        return Y;
+    }
 }

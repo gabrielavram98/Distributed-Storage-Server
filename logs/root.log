@@ -1493,3 +1493,173 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2024-01-18 09:39:36,379 INFO [http-nio-8081-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-01-18 09:39:36,379 INFO [http-nio-8081-exec-3] Initializing Servlet 'dispatcherServlet'
 2024-01-18 09:39:36,380 INFO [http-nio-8081-exec-3] Completed initialization in 1 ms
+2024-01-19 13:20:07,984 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 16628 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 13:20:07,990 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 13:20:09,905 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 13:20:09,915 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:20:09,920 INFO [main] Starting service [Tomcat]
+2024-01-19 13:20:09,920 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 13:20:10,101 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 13:20:10,104 INFO [main] Root WebApplicationContext: initialization completed in 1974 ms
+2024-01-19 13:20:10,880 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:20:10,908 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 13:20:10,918 INFO [main] Started StorageApplication in 3.49 seconds (process running for 4.664)
+2024-01-19 13:23:53,763 INFO [http-nio-8081-exec-6] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 13:23:53,763 INFO [http-nio-8081-exec-6] Initializing Servlet 'dispatcherServlet'
+2024-01-19 13:23:53,764 INFO [http-nio-8081-exec-6] Completed initialization in 1 ms
+2024-01-19 13:30:26,967 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 7952 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 13:30:26,970 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 13:30:28,448 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 13:30:28,460 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:30:28,463 INFO [main] Starting service [Tomcat]
+2024-01-19 13:30:28,464 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 13:30:28,629 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 13:30:28,630 INFO [main] Root WebApplicationContext: initialization completed in 1575 ms
+2024-01-19 13:30:29,325 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:30:29,355 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 13:30:29,366 INFO [main] Started StorageApplication in 2.854 seconds (process running for 3.581)
+2024-01-19 13:31:57,936 INFO [http-nio-8081-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 13:31:57,937 INFO [http-nio-8081-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-01-19 13:31:57,938 INFO [http-nio-8081-exec-2] Completed initialization in 1 ms
+2024-01-19 13:33:46,914 INFO [SpringApplicationShutdownHook] Pausing ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:33:46,914 INFO [SpringApplicationShutdownHook] Stopping service [Tomcat]
+2024-01-19 13:33:46,917 INFO [SpringApplicationShutdownHook] Waiting for [2] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2024-01-19 13:35:09,304 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 15236 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 13:35:09,306 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 13:35:10,766 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 13:35:10,785 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:35:10,790 INFO [main] Starting service [Tomcat]
+2024-01-19 13:35:10,791 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 13:35:10,960 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 13:35:10,961 INFO [main] Root WebApplicationContext: initialization completed in 1589 ms
+2024-01-19 13:35:11,670 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:35:11,709 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 13:35:11,719 INFO [main] Started StorageApplication in 2.889 seconds (process running for 3.622)
+2024-01-19 13:37:37,275 INFO [http-nio-8081-exec-6] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 13:37:37,275 INFO [http-nio-8081-exec-6] Initializing Servlet 'dispatcherServlet'
+2024-01-19 13:37:37,276 INFO [http-nio-8081-exec-6] Completed initialization in 1 ms
+2024-01-19 13:40:26,332 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 13396 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 13:40:26,333 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 13:40:27,707 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 13:40:27,716 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:40:27,719 INFO [main] Starting service [Tomcat]
+2024-01-19 13:40:27,719 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 13:40:27,852 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 13:40:27,854 INFO [main] Root WebApplicationContext: initialization completed in 1449 ms
+2024-01-19 13:40:28,437 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:40:28,468 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 13:40:28,480 INFO [main] Started StorageApplication in 2.589 seconds (process running for 3.278)
+2024-01-19 13:40:34,139 INFO [http-nio-8081-exec-5] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 13:40:34,140 INFO [http-nio-8081-exec-5] Initializing Servlet 'dispatcherServlet'
+2024-01-19 13:40:34,141 INFO [http-nio-8081-exec-5] Completed initialization in 1 ms
+2024-01-19 13:57:10,411 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 19188 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 13:57:10,414 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 13:57:11,898 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 13:57:11,909 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:57:11,913 INFO [main] Starting service [Tomcat]
+2024-01-19 13:57:11,913 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 13:57:12,047 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 13:57:12,048 INFO [main] Root WebApplicationContext: initialization completed in 1550 ms
+2024-01-19 13:57:12,692 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 13:57:12,720 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 13:57:12,730 INFO [main] Started StorageApplication in 2.799 seconds (process running for 3.543)
+2024-01-19 13:57:27,099 INFO [http-nio-8081-exec-5] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 13:57:27,099 INFO [http-nio-8081-exec-5] Initializing Servlet 'dispatcherServlet'
+2024-01-19 13:57:27,100 INFO [http-nio-8081-exec-5] Completed initialization in 1 ms
+2024-01-19 14:07:36,904 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 2256 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 14:07:36,906 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 14:07:38,385 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 14:07:38,396 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:07:38,399 INFO [main] Starting service [Tomcat]
+2024-01-19 14:07:38,400 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 14:07:38,532 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 14:07:38,534 INFO [main] Root WebApplicationContext: initialization completed in 1556 ms
+2024-01-19 14:07:39,145 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:07:39,172 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 14:07:39,182 INFO [main] Started StorageApplication in 2.736 seconds (process running for 3.619)
+2024-01-19 14:09:11,335 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 18252 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 14:09:11,337 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 14:09:12,917 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 14:09:12,929 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:09:12,932 INFO [main] Starting service [Tomcat]
+2024-01-19 14:09:12,932 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 14:09:13,094 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 14:09:13,096 INFO [main] Root WebApplicationContext: initialization completed in 1682 ms
+2024-01-19 14:09:13,735 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:09:13,776 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 14:09:13,791 INFO [main] Started StorageApplication in 2.947 seconds (process running for 3.754)
+2024-01-19 14:09:39,549 INFO [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 14:09:39,549 INFO [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-01-19 14:09:39,550 INFO [http-nio-8081-exec-1] Completed initialization in 1 ms
+2024-01-19 14:12:04,152 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 17860 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 14:12:04,156 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 14:12:05,626 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 14:12:05,635 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:12:05,637 INFO [main] Starting service [Tomcat]
+2024-01-19 14:12:05,637 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 14:12:05,789 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 14:12:05,791 INFO [main] Root WebApplicationContext: initialization completed in 1558 ms
+2024-01-19 14:12:06,443 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:12:06,477 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 14:12:06,489 INFO [main] Started StorageApplication in 2.811 seconds (process running for 3.549)
+2024-01-19 14:12:17,901 INFO [http-nio-8081-exec-4] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 14:12:17,901 INFO [http-nio-8081-exec-4] Initializing Servlet 'dispatcherServlet'
+2024-01-19 14:12:17,902 INFO [http-nio-8081-exec-4] Completed initialization in 1 ms
+2024-01-19 14:18:02,148 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 16676 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 14:18:02,150 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 14:18:03,460 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 14:18:03,470 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:18:03,473 INFO [main] Starting service [Tomcat]
+2024-01-19 14:18:03,473 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 14:18:03,616 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 14:18:03,617 INFO [main] Root WebApplicationContext: initialization completed in 1395 ms
+2024-01-19 14:18:04,191 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:18:04,221 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 14:18:04,232 INFO [main] Started StorageApplication in 2.553 seconds (process running for 3.281)
+2024-01-19 14:18:14,722 INFO [http-nio-8081-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 14:18:14,723 INFO [http-nio-8081-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-01-19 14:18:14,724 INFO [http-nio-8081-exec-2] Completed initialization in 1 ms
+2024-01-19 14:23:16,488 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 19412 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 14:23:16,492 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 14:23:18,004 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 14:23:18,014 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:23:18,017 INFO [main] Starting service [Tomcat]
+2024-01-19 14:23:18,017 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 14:23:18,182 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 14:23:18,184 INFO [main] Root WebApplicationContext: initialization completed in 1619 ms
+2024-01-19 14:23:18,845 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:23:18,900 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 14:23:18,911 INFO [main] Started StorageApplication in 2.893 seconds (process running for 3.617)
+2024-01-19 14:23:31,081 INFO [http-nio-8081-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 14:23:31,081 INFO [http-nio-8081-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-01-19 14:23:31,082 INFO [http-nio-8081-exec-2] Completed initialization in 1 ms
+2024-01-19 14:26:09,521 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 16420 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 14:26:09,524 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 14:26:11,223 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 14:26:11,233 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:26:11,236 INFO [main] Starting service [Tomcat]
+2024-01-19 14:26:11,237 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 14:26:11,428 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 14:26:11,431 INFO [main] Root WebApplicationContext: initialization completed in 1789 ms
+2024-01-19 14:26:12,122 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:26:12,159 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 14:26:12,171 INFO [main] Started StorageApplication in 3.183 seconds (process running for 3.921)
+2024-01-19 14:26:22,197 INFO [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 14:26:22,198 INFO [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-01-19 14:26:22,199 INFO [http-nio-8081-exec-1] Completed initialization in 1 ms
+2024-01-19 14:38:36,221 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 5784 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 14:38:36,224 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 14:38:39,431 INFO [main] Starting StorageApplication using Java 17.0.9 with PID 17764 (E:\Storage\target\classes started by Gabriel in E:\Storage)
+2024-01-19 14:38:39,433 INFO [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-19 14:38:40,942 INFO [main] Tomcat initialized with port(s): 8081 (http)
+2024-01-19 14:38:40,951 INFO [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:38:40,954 INFO [main] Starting service [Tomcat]
+2024-01-19 14:38:40,954 INFO [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-19 14:38:41,088 INFO [main] Initializing Spring embedded WebApplicationContext
+2024-01-19 14:38:41,090 INFO [main] Root WebApplicationContext: initialization completed in 1484 ms
+2024-01-19 14:38:41,699 INFO [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-01-19 14:38:41,728 INFO [main] Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-19 14:38:41,737 INFO [main] Started StorageApplication in 2.806 seconds (process running for 3.533)
+2024-01-19 14:38:58,435 INFO [http-nio-8081-exec-5] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 14:38:58,436 INFO [http-nio-8081-exec-5] Initializing Servlet 'dispatcherServlet'
+2024-01-19 14:38:58,437 INFO [http-nio-8081-exec-5] Completed initialization in 1 ms

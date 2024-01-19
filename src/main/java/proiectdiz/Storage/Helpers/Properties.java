@@ -83,7 +83,7 @@ public class Properties {
         try (InputStream input = new FileInputStream(CONFIG_FILE_PATH)) {
             java.util.Properties properties = new java.util.Properties();
             properties.load(input);
-            insert_proc=properties.getProperty("Insert_Share");
+            insert_proc=properties.getProperty("insert_shares_proc");
         }catch (Exception e){
             Log.ErrorLog(e.getMessage());
         }
@@ -94,7 +94,7 @@ public class Properties {
         try (InputStream input = new FileInputStream(CONFIG_FILE_PATH)) {
             java.util.Properties properties = new java.util.Properties();
             properties.load(input);
-            insert_proc=properties.getProperty("Insert_Encrypted_Share");
+            insert_proc=properties.getProperty("insert_encrypted_shares_proc");
         }catch (Exception e){
             Log.ErrorLog(e.getMessage());
         }
@@ -105,7 +105,7 @@ public class Properties {
         try (InputStream input = new FileInputStream(CONFIG_FILE_PATH)) {
             java.util.Properties properties = new java.util.Properties();
             properties.load(input);
-            return_proc=properties.getProperty("GetRowsByUUIDs");
+            return_proc=properties.getProperty("get_shares_by_uuid_procedure");
         }catch (Exception e){
             Log.ErrorLog(e.getMessage());
         }

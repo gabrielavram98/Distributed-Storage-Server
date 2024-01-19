@@ -138,7 +138,12 @@ public class JsonHandler {
             JsonNode sharesNode = pile.get("GUIDs");
             if (sharesNode.isArray()) {
                 for (JsonNode shareNode : sharesNode) {
+
                     String guid = shareNode.get("GUID").asText();
+                    if(guid.charAt(0)==' '){
+                       guid= guid.substring(1,guid.length()-1);
+                    }
+                    //guid="'"+guid+"'";
 
                    // ShareObject share = new ShareObject(guid);
                     shares.add(guid);

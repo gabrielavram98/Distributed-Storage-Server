@@ -33,6 +33,7 @@ public class RequestHandler {
             params.add(obj.getX());
             params.add(obj.getY());
             Map<String,String> results=db_handler.ExecuteStoredProcedure(Properties.getInsertShareProc(),params);
+            System.out.println("OK");
 
 
 

@@ -8,10 +8,10 @@ import com.networknt.schema.ValidationMessage;
 import java.util.Set;
 
 public class ValidationCheck {
-    public static int Validate(JsonNode request) throws Exception {
+    public static int Validate(JsonNode request,String path) throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
 
-        JsonSchema schemaStream = SchemaLoader.LoadSchemaFromPath( "src\\main\\resources\\Share_format.json" );
+        JsonSchema schemaStream = SchemaLoader.LoadSchemaFromPath( path );
         Set<ValidationMessage> validationMessage = null;
         if (schemaStream != null) {
 
@@ -25,4 +25,5 @@ public class ValidationCheck {
 
 
     }
+
 }

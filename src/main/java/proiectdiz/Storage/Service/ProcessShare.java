@@ -1,13 +1,17 @@
 package proiectdiz.Storage.Service;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.annotation.JsonAppend;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import proiectdiz.Storage.Database.DatabaseHandler;
 import proiectdiz.Storage.Helpers.JsonHandler;
 import proiectdiz.Storage.Helpers.Properties;
 import proiectdiz.Storage.Log.Log;
+import proiectdiz.Storage.Model.QuantecKey;
 import proiectdiz.Storage.Model.ShareObject;
 import proiectdiz.Storage.Senders.AES;
+import proiectdiz.Storage.Senders.KeyRequestor;
 import proiectdiz.Storage.Senders.KeyRequestorById;
 
 import javax.crypto.spec.IvParameterSpec;
@@ -17,7 +21,7 @@ import java.util.*;
 public class ProcessShare {
 
     public ProcessShare(){}
-    public JsonNode Process(JsonNode share) throws InterruptedException {
+    public JsonNode DecryptShares(JsonNode share) throws InterruptedException {
 
         System.out.println(share);
         String key_ID=share.get("key_ID").asText();
@@ -36,10 +40,7 @@ public class ProcessShare {
             AES aes= new AES(key,encrypted_share);
             aes.setIv(new IvParameterSpec(ivBytes));
             String sharePlainText=aes.Decrypt();
-            //List<ShareObject> shares= JsonHandler.getSharesFromPile(sharePlainText);
             return JsonHandler.StringToJson(sharePlainText);
-            //System.out.println("I come from thread that handles share number:"+key_ID.charAt(key_ID.length()-1)+": "+sharePlainText);
-
         }catch (Exception e){
             Log.ErrorLog(e.getMessage());
             return null;
@@ -51,22 +52,37 @@ public class ProcessShare {
 
     }
 
-    public void Gather(JsonNode guid_list_json , String servernumber) throws SQLException {
-        DatabaseHandler db_handler= new DatabaseHandler(Properties.getUsername(),Properties.getPassword(),Properties.getConnectionString(),servernumber);
-            List<String> guid_string_list=JsonHandler.getUUID_List_FromPile(guid_list_json);
-            String guid_string=  String.join(",",guid_string_list);
-            List<String>params= new ArrayList<>();
-            params.add(guid_string);
-            Map<String,String> results= db_handler.ExecuteStoredProcedure(Properties.getReturnProc(),params);
+    public String EncryptShares(String server_shares, String servernumber) throws Exception {
+       try{
+           KeyRequestor requestor= new KeyRequestor(Integer.parseInt(servernumber));
+           requestor.start();
+           requestor.join();
+           QuantecKey key=requestor.getKey();
+           AES aes= new AES(key.getKey(),server_shares);
+           String encrypted_shares= aes.Encrypt();
+           ObjectMapper objectMapper = new ObjectMapper();
+           ObjectNode rootNode = objectMapper.createObjectNode();
+           rootNode.put("key_ID",key.get_keyId());
+           rootNode.put("Shares",encrypted_shares);
+           rootNode.put("IV",aes.getIv());
+           rootNode.put("Server",servernumber);
+           return rootNode.toPrettyString();
 
-           // List<ShareObject> populated_shares= db_handler.populate_with_shares(empty_shares);
 
+
+
+       }catch(Exception e){
+           Log.ErrorLog(e.getMessage());
+           throw new Exception(e.getMessage());
+       }
 
     }
-    public List<ShareObject> populate_with_shares(List<ShareObject> empty_list){
-        List<ShareObject> populated_list= new ArrayList<>();
-        //todo: populate list
-        return populated_list;
-    }
+
+
+
+
+
+
+
 
 }

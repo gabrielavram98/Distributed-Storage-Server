@@ -111,6 +111,17 @@ public class Properties {
         }
         return return_proc;
     }
+    public static String getClientBaseUrl(){
+        String client_url="";
+        try (InputStream input = new FileInputStream(CONFIG_FILE_PATH)) {
+            java.util.Properties properties = new java.util.Properties();
+            properties.load(input);
+            client_url=properties.getProperty("client_base_url");
+        }catch (Exception e){
+            Log.ErrorLog(e.getMessage());
+        }
+        return client_url;
+    }
 
 
 }

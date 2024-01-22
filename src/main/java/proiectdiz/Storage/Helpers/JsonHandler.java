@@ -141,7 +141,7 @@ public class JsonHandler {
 
                     String guid = shareNode.get("GUID").asText();
                     if(guid.charAt(0)==' '){
-                       guid= guid.substring(1,guid.length()-1);
+                       guid= guid.substring(1,guid.length());
                     }
                     //guid="'"+guid+"'";
 
@@ -159,11 +159,27 @@ public class JsonHandler {
 
     }
 
- //   public static String CreateSHARESJsonToSend(List<ShareObject> populated_list){
- //       ObjectMapper objectMapper = new ObjectMapper();
- //       JsonNode node=objectMapper.
- //       for()
- //   }
+
+
+    public static String CreateSHARESJsonToSend(List<ShareObject> shares, String serverNumber){
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectNode rootNode = objectMapper.createObjectNode();
+        ArrayNode SharesArray = objectMapper.createArrayNode();
+        for(ShareObject obj:shares){
+            ObjectNode share_obj = objectMapper.createObjectNode();
+            share_obj.put("GUID",obj.getGUID());
+            share_obj.put("X",obj.getX());
+            share_obj.put("Y",obj.getY());
+            SharesArray.add(share_obj);
+
+        }
+        rootNode.set("Shares",SharesArray);
+        rootNode.put("Server",serverNumber);
+        return rootNode.toString();
+
+
+    }
 
 
 

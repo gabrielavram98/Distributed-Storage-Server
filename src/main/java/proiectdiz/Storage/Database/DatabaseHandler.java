@@ -24,7 +24,7 @@ public class DatabaseHandler {
         this.connectionString = connectionString+servernumber+";encrypt=false";
     }
 
-    public Map<String,String> ExecuteStoredProcedure(String stored_procedure, List<String> params) throws SQLException {
+    public List<ShareObject> ExecuteStoredProcedure(String stored_procedure, List<String> params) throws SQLException {
 
         try (Connection connection = DriverManager.getConnection(connectionString, Username, Password)) {
             String stored_procedure_string=Create_Stored_Procedure_Call_String(stored_procedure,params.size());
@@ -33,20 +33,24 @@ public class DatabaseHandler {
                     callableStatement.setString(i, params.get(i-1));
                 }
                 boolean isResultSet = callableStatement.execute();
+
                 if(isResultSet){
                     ResultSet resultSet=callableStatement.getResultSet();
-                    Map<String,String> results= new HashMap<>();
+                    List<ShareObject> results= new ArrayList<>();
 
                     ResultSetMetaData metaData = resultSet.getMetaData();
                     int columnCount = metaData.getColumnCount();
                     List<String> columnNames = new ArrayList<>();
-                    for (int i = 1; i <= columnCount; i++) {
-                        String columnName = metaData.getColumnName(i);
-                        columnNames.add(columnName);
-                    }
+                   // for (int i = 1; i <= columnCount; i++) {
+                   //     String columnName = metaData.getColumnName(i);
+                   //     columnNames.add(columnName);
+                   // }
                     while (resultSet.next()){
                         for(String column:columnNames){
-                            results.put(column,resultSet.getObject(column).toString());
+                            ShareObject row= new ShareObject(resultSet.getString("X"),resultSet.getString("Y"), resultSet.getString("GUID"));
+                            //result.put(column,resultSet.getObject(column).toString());
+                            results.add(row);
+
                         }
                         //results.put("P",resultSet.getString("P"));
                         //results.put("PASSWORD_b64_hash",resultSet.getString("PASSWORD_b64_hash"));

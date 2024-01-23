@@ -21221,3 +21221,35 @@
 }
 2024-01-22 21:14:15,453 ERROR [http-nio-8081-exec-3] Cannot invoke "java.util.List.iterator()" because "shares" is null
 2024-01-22 21:23:19,450 ERROR [http-nio-8081-exec-8] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 09:27:32,315 ERROR [http-nio-8081-exec-1] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 09:30:46,553 ERROR [http-nio-8081-exec-4] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 09:31:46,943 ERROR [http-nio-8081-exec-2] An established connection was aborted by the software in your host machine
+2024-01-23 09:31:46,944 ERROR [http-nio-8081-exec-2] Cannot invoke "com.fasterxml.jackson.databind.JsonNode.get(String)" because "pile" is null
+2024-01-23 09:31:46,948 ERROR [http-nio-8081-exec-9] An established connection was aborted by the software in your host machine
+2024-01-23 09:31:46,948 ERROR [http-nio-8081-exec-2] null
+2024-01-23 09:31:46,949 ERROR [http-nio-8081-exec-9] Cannot invoke "com.fasterxml.jackson.databind.JsonNode.get(String)" because "pile" is null
+2024-01-23 09:31:46,950 ERROR [http-nio-8081-exec-9] null
+2024-01-23 09:31:46,953 ERROR [http-nio-8081-exec-12] An established connection was aborted by the software in your host machine
+2024-01-23 09:31:46,954 ERROR [http-nio-8081-exec-12] Cannot invoke "com.fasterxml.jackson.databind.JsonNode.get(String)" because "pile" is null
+2024-01-23 09:31:46,955 ERROR [http-nio-8081-exec-12] null
+2024-01-23 09:38:23,968 ERROR [http-nio-8081-exec-3] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 09:50:45,917 ERROR [http-nio-8081-exec-6] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 09:52:29,389 ERROR [http-nio-8081-exec-10] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 09:54:28,853 ERROR [http-nio-8081-exec-3] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 09:56:27,752 ERROR [http-nio-8081-exec-1] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 10:01:54,848 ERROR [http-nio-8081-exec-3] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 10:03:05,735 ERROR [http-nio-8081-exec-4] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 10:05:36,228 ERROR [http-nio-8081-exec-2] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 10:07:34,336 ERROR [http-nio-8081-exec-3] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 10:25:23,260 ERROR [http-nio-8081-exec-1] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 10:26:51,981 ERROR [http-nio-8081-exec-10] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 15:39:45,460 ERROR [http-nio-8081-exec-4] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 16:14:58,152 ERROR [http-nio-8081-exec-3] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 17:21:48,632 ERROR [http-nio-8081-exec-5] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 17:22:53,462 ERROR [http-nio-8081-exec-9] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 17:26:25,034 ERROR [http-nio-8081-exec-8] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 17:27:35,681 ERROR [http-nio-8081-exec-7] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 17:31:52,733 ERROR [http-nio-8081-exec-2] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 19:32:07,017 ERROR [http-nio-8081-exec-5] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 19:37:12,883 ERROR [http-nio-8081-exec-6] Cannot invoke "java.util.List.iterator()" because "shares" is null
+2024-01-23 20:26:45,627 ERROR [http-nio-8081-exec-4] Cannot invoke "java.util.List.iterator()" because "shares" is null

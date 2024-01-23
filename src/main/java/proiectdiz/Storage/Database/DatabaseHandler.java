@@ -46,12 +46,12 @@ public class DatabaseHandler {
                    //     columnNames.add(columnName);
                    // }
                     while (resultSet.next()){
-                        for(String column:columnNames){
+                        //for(String column:columnNames){
                             ShareObject row= new ShareObject(resultSet.getString("X"),resultSet.getString("Y"), resultSet.getString("GUID"));
                             //result.put(column,resultSet.getObject(column).toString());
                             results.add(row);
 
-                        }
+                        //}
                         //results.put("P",resultSet.getString("P"));
                         //results.put("PASSWORD_b64_hash",resultSet.getString("PASSWORD_b64_hash"));
                         //results.put("UUID_list",resultSet.getString("UUID_list"));

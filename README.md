@@ -1,0 +1,2 @@
+Acest proiect reprezinta partea de storage a proiectului SITRIBUTED STORAGE SYSTEM USING SHAMIR’S SECRET SHARING SCHEME AND QUANTUM KEY DISTRIBUTION
+
